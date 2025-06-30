@@ -1,9 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Frontend Assessment Project
 
-## Getting Started
+A modern Next.js application built as a frontend assessment, featuring a custom landing page template with modular component architecture.
 
-First, run the development server:
+## 🚀 Technologies Used
 
+- **Next.js 15** - React framework with App Router
+- **React 18** - Frontend library
+- **TypeScript** - Type-safe development
+- **Tailwind CSS** - Utility-first CSS framework
+- **ESLint** - Code linting and formatting
+
+## 📁 Project Structure
+
+```
+src/
+├── app/
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+├── components/
+│   ├── templates/
+│   │   └── LandingPage/
+│   │       └── LandingPageTemplate.tsx
+│   └── organisms/
+│       └── LandingPage/
+│           └── LandingPageMainView.tsx
+└── lib/
+```
+
+## 🛠️ Getting Started
+
+### Prerequisites
+
+- Node.js 18.x or later
+- npm, yarn, pnpm, or bun
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/zohaib68-adly/frontendassessment.git
+cd frontendassessment/my-nextjs-app
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
+
+3. Run the development server:
 ```bash
 npm run dev
 # or
@@ -14,23 +65,75 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🧩 Component Architecture
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The project follows a modular component architecture:
 
-## Learn More
+- **Templates**: High-level page layouts (`LandingPageTemplate`)
+- **Organisms**: Complex UI components (`LandingPageMainView`)
+- **App Router**: Modern Next.js routing in the `app/` directory
 
-To learn more about Next.js, take a look at the following resources:
+## 🎨 Styling
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project uses Tailwind CSS for styling with:
+- Responsive design principles
+- Dark mode support
+- Custom font integration (Geist)
+- Utility-first approach
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📱 Features
 
-## Deploy on Vercel
+- ✅ Responsive landing page design
+- ✅ TypeScript for type safety
+- ✅ Modern Next.js App Router
+- ✅ Component-based architecture
+- ✅ Tailwind CSS styling
+- ✅ ESLint configuration
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🚀 Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Deploy on Vercel (Recommended)
+
+1. Push your code to GitHub
+2. Connect your repository to [Vercel](https://vercel.com/new)
+3. Vercel will automatically deploy your app
+
+### Other Deployment Options
+
+- **Netlify**: Connect your GitHub repository
+- **AWS Amplify**: Deploy with AWS services
+- **Static Export**: Use `npm run build` for static hosting
+
+## 📚 Learn More
+
+To learn more about the technologies used:
+
+- [Next.js Documentation](https://nextjs.org/docs) - Learn about Next.js features and API
+- [React Documentation](https://react.dev) - Learn React fundamentals
+- [Tailwind CSS](https://tailwindcss.com/docs) - Utility-first CSS framework
+- [TypeScript](https://www.typescriptlang.org/docs) - TypeScript documentation
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/your-feature-name`
+3. Commit your changes: `git commit -m 'Add some feature'`
+4. Push to the branch: `git push origin feature/your-feature-name`
+5. Open a pull request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👨‍💻 Development Notes
+
+- The main page component is located in `src/app/page.tsx`
+- Custom components are organized in `src/components/`
+- Global styles are in `src/app/globals.css`
+- The app auto-updates as you edit files during development
+
+---
+
+Built with ❤️ for frontend assessment

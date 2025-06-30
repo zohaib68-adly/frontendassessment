@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Montserrat } from "next/font/google";
+import Image from "next/image";
 import "./globals.css";
+import { NavBar } from "@/components/molecules/NavBar/NavBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -9,6 +11,11 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
 });
 
@@ -25,8 +32,24 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} antialiased`}
       >
+        <NavBar />
+        <div className="w-fit absolute left-1/2 -translate-x-1/2 ">
+          <Image
+            src="/bacgrounds/topSectionBackground.png"
+            alt="Landing Page Background"
+            width={640}
+            height={269}
+            className="object-contain rounded-b-full opacity-50"
+            style={{
+              mixBlendMode: 'lighten',
+              background: 'radial-gradient(127.88% 53.54% at 50% 49.91%, rgba(24, 15, 79, 0) 0%, #240861 100%)'
+            }}
+            unoptimized
+          />
+        </div>
+
         {children}
       </body>
     </html>
